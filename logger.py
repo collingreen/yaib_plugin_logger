@@ -90,5 +90,5 @@ class Plugin(BasePlugin):
     def onKicked(self, kicker_user, kicker, channel, message):
         self._activity('kick', kicker_user, kicker, channel, self.nick, message)
 
-    def onNickChange(self, nick):
-        self._activity('nick_change', '', self.nick, '', nick)
+    def onNickChange(self, nick, old_nick):
+        self._activity('nick_change', '', self.nick, '', old_nick, nick)
