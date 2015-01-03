@@ -1,5 +1,8 @@
 from sqlalchemy import Table, Column, String, DateTime, Text
-from modules.persistence import Base, CustomBase
+from modules.persistence import Base, getModelBase
+
+
+CustomBase = getModelBase('logger')
 
 
 class Log(Base, CustomBase):
